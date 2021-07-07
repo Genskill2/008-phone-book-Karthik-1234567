@@ -18,26 +18,6 @@ int search(FILE *,char *);
 void list(FILE *);
 int delete(FILE *, char *);
 
-/#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-const char *DB="directory.db";
-
-struct entry0 {
-  char name[20];
-  char phone[20];
-  struct entry0 *next;
-};
-
-typedef struct entry0 entry;
-
-/* Command handlers */
-void add(char *, char *);
-int search(FILE *,char *);
-void list(FILE *);
-int delete(FILE *, char *);
-
 /* Utility functions  */
 FILE * open_db_file(); /* Opens the database file. Prints error and
                           quits if it's not available */
